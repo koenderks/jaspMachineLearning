@@ -160,6 +160,12 @@ Description
 	}
 	Analysis
 	{
+		menu:	qsTr("Isolation Forest")
+		title:	qsTr("Isolation Forest Clustering")
+		func:	"mlClusteringIsolationForest"
+	}
+	Analysis
+	{
 		menu:	qsTr("Neighborhood-Based")
 		title:	qsTr("Neighborhood-Based Clustering")
 		func:	"mlClusteringKMeans"
