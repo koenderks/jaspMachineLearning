@@ -200,4 +200,28 @@ Description
 		title:		qsTr("Random Forest Clustering")
 		func:		"mlClusteringRandomForest"
 	}
+
+	GroupTitleSmall
+	{
+		title:	qsTr("Anomaly Detection")
+		icon: 	"analysis-ml-clustering.svg"
+	}
+	Analysis
+	{
+		menu:	qsTr("Outlier Tree")
+		title:	qsTr("Outlier Tree Anomaly Detection")
+		func:	"mlAnomalyOutlierTree"
+	}
+	Analysis
+	{
+		menu:	qsTr("Isolation Forest")
+		title:	qsTr("Isolation Forest Anomaly Detection")
+		func:	"mlAnomalyIsolationForest"
+	}
+	Analysis
+	{
+		menu:	qsTr("Support Vector Machine")
+		title:	qsTr("Support Vector Machine Anomaly Detection")
+		func:	"mlAnomalySvm"
+	}
 }
