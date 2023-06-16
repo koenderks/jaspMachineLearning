@@ -14,6 +14,7 @@ Description
 	icon:			"analysis-ml-ribbon.svg"
 	preloadData:	true
 
+	// NEEDS FIRST-LEVEL HEADER "SUPERVISED"
 	GroupTitle
 	{
 		title:		qsTr("Supervised Learning")
@@ -147,6 +148,7 @@ Description
 		func:		"mlPrediction"
 	}
 
+	// NEEDS FIRST-LEVEL HEADER "UNSUPERVISED"
 	GroupTitle
 	{
 		title:		qsTr("Unsupervised Learning")
@@ -204,19 +206,19 @@ Description
 	GroupTitleSmall
 	{
 		title:	qsTr("Anomaly Detection")
-		icon: 	"analysis-ml-clustering.svg"
-	}
-	Analysis
-	{
-		menu:	qsTr("Outlier Tree")
-		title:	qsTr("Outlier Tree Anomaly Detection")
-		func:	"mlAnomalyOutlierTree"
+		icon: 	"analysis-ml-anomaly.svg"
 	}
 	Analysis
 	{
 		menu:	qsTr("Isolation Forest")
 		title:	qsTr("Isolation Forest Anomaly Detection")
 		func:	"mlAnomalyIsolationForest"
+	}
+	Analysis
+	{
+		menu:	qsTr("Outlier Tree")
+		title:	qsTr("Outlier Tree Anomaly Detection")
+		func:	"mlAnomalyOutlierTree"
 	}
 	Analysis
 	{
