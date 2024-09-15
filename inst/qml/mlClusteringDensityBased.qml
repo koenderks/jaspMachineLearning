@@ -61,6 +61,8 @@ Form
 		enabled:								vars.predictorCount > 1
 		showSave:								false
 	}
+	
+	UI.ExplanatoryText { }
 
 	Section
 	{
