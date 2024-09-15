@@ -34,28 +34,28 @@ mlRegressionDecisionTree <- function(jaspResults, dataset, options, state = NULL
   .mlAddTestIndicatorToData(options, jaspResults, ready, purpose = "regression")
 
   # Create the data split plot
-  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 2, purpose = "regression", type = "rpart")
+  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 3, purpose = "regression", type = "rpart")
 
   # Create the evaluation metrics table
-  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 3)
+  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 4)
 
   # Create the variable importance table
-  .mlDecisionTreeTableVarImp(options, jaspResults, ready, position = 4, purpose = "regression")
+  .mlDecisionTreeTableVarImp(options, jaspResults, ready, position = 5, purpose = "regression")
 
   # Create the shap table
-  .mlTableShap(dataset, options, jaspResults, ready, position = 5, purpose = "regression")
+  .mlTableShap(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
 
   # Create the splits table
-  .mlDecisionTreeTableSplits(options, jaspResults, ready, position = 6, purpose = "regression")
+  .mlDecisionTreeTableSplits(options, jaspResults, ready, position = 7, purpose = "regression")
 
   # Create the predicted performance plot
-  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 7)
+  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 8)
 
   # Create the optimization plot
-  .mlDecisionTreePlotError(dataset, options, jaspResults, ready, position = 8, purpose = "regression")
+  .mlDecisionTreePlotError(dataset, options, jaspResults, ready, position = 9, purpose = "regression")
 
   # Create the decision tree plot
-  .mlDecisionTreePlotTree(dataset, options, jaspResults, ready, position = 9, purpose = "regression")
+  .mlDecisionTreePlotTree(dataset, options, jaspResults, ready, position = 10, purpose = "regression")
 }
 
 .decisionTreeRegression <- function(dataset, options, jaspResults, ready) {

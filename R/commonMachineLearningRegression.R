@@ -225,6 +225,18 @@
 }
 
 .mlRegressionTableSummary <- function(dataset, options, jaspResults, ready, position, type) {
+  # Explanatory text
+  if (options[["explanatoryText"]]) {
+    text <- createJaspHtml(gettextf(
+      "The goal of regression is to predict a numerical outcome%1$sbased on several features. In this analysis, a %2$s algorithm is trained on the training set and then evaluated on the test set. The summary table below shows the settings of the trained algorithm alongside the mean squared error (MSE) on the test set.",
+      if (options[["target"]] != "") paste0(" <i>(", options[["target"]], ")</i> ") else " ",
+      type)
+    )
+    text$dependOn("explanatoryText")
+    text$position <- position
+    jaspResults[["summaryTableText"]] <- text
+  }
+  # Summary table
   if (!is.null(jaspResults[["regressionTable"]])) {
     return()
   }
@@ -240,7 +252,7 @@
   )
   tableTitle <- gettextf("Model Summary: %1$s", title)
   table <- createJaspTable(tableTitle)
-  table$position <- position
+  table$position <- position + 1
   table$dependOn(options = .mlRegressionDependencies(options, includeSaveOptions = TRUE))
   # Add analysis-specific columns
   if (type == "knn") {

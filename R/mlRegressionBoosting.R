@@ -34,28 +34,28 @@ mlRegressionBoosting <- function(jaspResults, dataset, options, ...) {
   .mlAddTestIndicatorToData(options, jaspResults, ready, purpose = "regression")
 
   # Create the data split plot
-  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 2, purpose = "regression", type = "boosting")
+  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 3, purpose = "regression", type = "boosting")
 
   # Create the evaluation metrics table
-  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 3)
+  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 4)
 
   # Create the relative influence table
-  .mlBoostingTableFeatureImportance(options, jaspResults, ready, position = 4, purpose = "regression")
+  .mlBoostingTableFeatureImportance(options, jaspResults, ready, position = 5, purpose = "regression")
 
   # Create the shap table
-  .mlTableShap(dataset, options, jaspResults, ready, position = 5, purpose = "regression")
+  .mlTableShap(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
 
   # Create the predicted performance plot
-  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 6)
+  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 7)
 
   # Create the OOB improvement plot
-  .mlBoostingPlotOobImprovement(options, jaspResults, ready, position = 7, purpose = "regression")
+  .mlBoostingPlotOobImprovement(options, jaspResults, ready, position = 8, purpose = "regression")
 
   # Create the deviance plot
-  .mlBoostingPlotDeviance(options, jaspResults, ready, position = 8, purpose = "regression")
+  .mlBoostingPlotDeviance(options, jaspResults, ready, position = 9, purpose = "regression")
 
   # Create the relative influence plot
-  .mlBoostingPlotRelInf(options, jaspResults, ready, position = 9, purpose = "regression")
+  .mlBoostingPlotRelInf(options, jaspResults, ready, position = 10, purpose = "regression")
 }
 
 .boostingRegression <- function(dataset, options, jaspResults) {
