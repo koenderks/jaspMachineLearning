@@ -34,28 +34,28 @@ mlRegressionRegularized <- function(jaspResults, dataset, options, ...) {
   .mlAddTestIndicatorToData(options, jaspResults, ready, purpose = "regression")
 
   # Create the data split plot
-  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 2, purpose = "regression", type = "regularized")
+  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 3, purpose = "regression", type = "regularized")
 
   # Create the evaluation metrics table
-  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 3)
+  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 4)
 
   # Create the feature importance table
-  .mlTableFeatureImportance(options, jaspResults, ready, position = 4, purpose = "regression")
+  .mlTableFeatureImportance(options, jaspResults, ready, position = 5, purpose = "regression")
 
   # Create the shap table
-  .mlTableShap(dataset, options, jaspResults, ready, position = 5, purpose = "regression")
+  .mlTableShap(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
 
   # Create the regression coefficients table
-  .mlRegressionRegularizedTableCoef(options, jaspResults, ready, position = 6)
+  .mlRegressionRegularizedTableCoef(options, jaspResults, ready, position = 7)
 
   # Create the predicted performance plot
-  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 8) # position + 1 for regression equation
+  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 9) # position + 1 for regression equation
 
   # Create the variable trace plot
-  .mlRegressionRegularizedPlotVariableTrace(options, jaspResults, ready, position = 9)
+  .mlRegressionRegularizedPlotVariableTrace(options, jaspResults, ready, position = 10)
 
   # Create the lambda evaluation plot
-  .mlRegressionRegularizedPlotLambda(options, jaspResults, ready, position = 10)
+  .mlRegressionRegularizedPlotLambda(options, jaspResults, ready, position = 11)
 }
 
 .regularizedRegression <- function(dataset, options, jaspResults) {
