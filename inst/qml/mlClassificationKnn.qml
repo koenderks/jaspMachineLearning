@@ -56,6 +56,7 @@ Form
 	}
 
 	UI.ExportResults { enabled: vars.predictorCount > 0 && vars.targetCount > 0 }
+	UI.ExplanatoryText { }
 	UI.DataSplit { trainingValidationSplit:	!optim.isManual }
 
 	Section
