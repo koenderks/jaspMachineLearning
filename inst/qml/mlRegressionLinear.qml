@@ -50,6 +50,7 @@ Form
 	}
 
 	UI.ExportResults { enabled:	vars.predictorCount > 1 > 0 && vars.targetCount > 0 }
+	UI.ExplanatoryText { }
 	UI.DataSplit { trainingValidationSplit: false }
 
 	Section

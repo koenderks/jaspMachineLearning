@@ -80,6 +80,8 @@ Form
 		enabled:								vars.predictorCount > 1 && vars.targetCount > 0
 	}
 
+	UI.ExplanatoryText { }
+
 	UI.DataSplit
 	{
 		leaveOneOutVisible:						false

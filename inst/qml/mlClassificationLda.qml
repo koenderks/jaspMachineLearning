@@ -132,6 +132,8 @@ Form
 		}
 	}
 
+	UI.ExplanatoryText { }
+
 	UI.DataSplit
 	{
 		leaveOneOutVisible:			false

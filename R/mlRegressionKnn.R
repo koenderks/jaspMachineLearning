@@ -34,25 +34,25 @@ mlRegressionKnn <- function(jaspResults, dataset, options, state = NULL) {
   .mlAddTestIndicatorToData(options, jaspResults, ready, purpose = "regression")
 
   # Create the data split plot
-  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 2, purpose = "regression", type = "knn")
+  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 3, purpose = "regression", type = "knn")
 
   # Create the evaluation metrics table
-  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 3)
+  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 4)
 
   # Create the feature importance table
-  .mlTableFeatureImportance(options, jaspResults, ready, position = 4, purpose = "regression")
+  .mlTableFeatureImportance(options, jaspResults, ready, position = 5, purpose = "regression")
 
   # Create the shap table
-  .mlTableShap(dataset, options, jaspResults, ready, position = 5, purpose = "regression")
+  .mlTableShap(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
 
   # Create the predicted performance plot
-  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 6)
+  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 7)
 
   # Create the mean squared error plot
-  .mlKnnPlotError(dataset, options, jaspResults, ready, position = 7, purpose = "regression")
+  .mlKnnPlotError(dataset, options, jaspResults, ready, position = 8, purpose = "regression")
 
   # Create the weights plot
-  .mlKnnPlotWeights(options, jaspResults, position = 8)
+  .mlKnnPlotWeights(options, jaspResults, position = 9)
 }
 
 .knnRegression <- function(dataset, options, jaspResults, ready) {
