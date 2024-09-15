@@ -34,28 +34,28 @@ mlRegressionRandomForest <- function(jaspResults, dataset, options, ...) {
   .mlAddTestIndicatorToData(options, jaspResults, ready, purpose = "regression")
 
   # Create the data split plot
-  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 2, purpose = "regression", type = "randomForest")
+  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 3, purpose = "regression", type = "randomForest")
 
   # Create the evaluation metrics table
-  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 3)
+  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 4)
 
   # Create the variable importance table
-  .mlRandomForestTableFeatureImportance(options, jaspResults, ready, position = 4, purpose = "regression")
+  .mlRandomForestTableFeatureImportance(options, jaspResults, ready, position = 5, purpose = "regression")
 
   # Create the shap table
-  .mlTableShap(dataset, options, jaspResults, ready, position = 5, purpose = "regression")
+  .mlTableShap(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
 
   # Create the predicted performance plot
-  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 6)
+  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 7)
 
   # Create the trees vs model error plot
-  .mlRandomForestPlotError(options, jaspResults, ready, position = 7, purpose = "regression")
+  .mlRandomForestPlotError(options, jaspResults, ready, position = 8, purpose = "regression")
 
   # Create the mean decrease in accuracy plot
-  .mlRandomForestPlotDecreaseAccuracy(options, jaspResults, ready, position = 8, purpose = "regression")
+  .mlRandomForestPlotDecreaseAccuracy(options, jaspResults, ready, position = 9, purpose = "regression")
 
   # Create the total increase in node purity plot
-  .mlRandomForestPlotIncreasePurity(options, jaspResults, ready, position = 9, purpose = "regression")
+  .mlRandomForestPlotIncreasePurity(options, jaspResults, ready, position = 10, purpose = "regression")
 }
 
 .randomForestRegression <- function(dataset, options, jaspResults) {

@@ -62,6 +62,8 @@ Form
 		showSave:								false
 	}
 
+	UI.ExplanatoryText { }
+
 	Section
 	{
 		title:									qsTr("Training Parameters")

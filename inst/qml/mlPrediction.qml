@@ -117,4 +117,6 @@ Form
 		enabled:								predictors.count > 1
 		showSave:								false
 	}
+
+	UI.ExplanatoryText { }
 }

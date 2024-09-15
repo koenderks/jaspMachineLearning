@@ -38,31 +38,31 @@ mlRegressionNeuralNetwork <- function(jaspResults, dataset, options, ...) {
   .mlAddTestIndicatorToData(options, jaspResults, ready, purpose = "regression")
 
   # Create the data split plot
-  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 2, purpose = "regression", type = "neuralnet")
+  .mlPlotDataSplit(dataset, options, jaspResults, ready, position = 3, purpose = "regression", type = "neuralnet")
 
   # Create the evaluation metrics table
-  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 3)
+  .mlRegressionTableMetrics(dataset, options, jaspResults, ready, position = 4)
 
   # Create the feature importance table
-  .mlTableFeatureImportance(options, jaspResults, ready, position = 4, purpose = "regression")
+  .mlTableFeatureImportance(options, jaspResults, ready, position = 5, purpose = "regression")
 
   # Create the shap table
-  .mlTableShap(dataset, options, jaspResults, ready, position = 5, purpose = "regression")
+  .mlTableShap(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
 
   # Create the network weights table
-  .mlNeuralNetworkTableWeights(dataset, options, jaspResults, ready, position = 6, purpose = "regression")
+  .mlNeuralNetworkTableWeights(dataset, options, jaspResults, ready, position = 7, purpose = "regression")
 
   # Create the predicted performance plot
-  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 7)
+  .mlRegressionPlotPredictedPerformance(options, jaspResults, ready, position = 8)
 
   # Create the error plot
-  .mlNeuralNetworkPlotError(dataset, options, jaspResults, ready, position = 8, purpose = "regression")
+  .mlNeuralNetworkPlotError(dataset, options, jaspResults, ready, position = 9, purpose = "regression")
 
   # Create the activation function plot
-  .mlNeuralNetworkPlotActivationFunction(options, jaspResults, position = 9)
+  .mlNeuralNetworkPlotActivationFunction(options, jaspResults, position = 10)
 
   # Create the network graph
-  .mlNeuralNetworkPlotStructure(dataset, options, jaspResults, ready, purpose = "regression", position = 10)
+  .mlNeuralNetworkPlotStructure(dataset, options, jaspResults, ready, purpose = "regression", position = 11)
 }
 
 .getNeuralNetworkStructure <- function(options) {
